@@ -1,0 +1,102 @@
+Write a python program that takes string as an input and asks to remove the specific character in the center without using any string function
+
+def remove_center_character(input_string):
+    # Initialize variables
+    new_string = ""
+    length = 0
+
+    # Calculate the length of the string without using len()
+    for char in input_string:
+        length += 1
+
+    # Find the center index
+    center_index = length // 2
+
+    # Construct the new string without the center character
+    index = 0
+    for char in input_string:
+        if index != center_index:
+            new_string += char
+        index += 1
+
+    return new_string
+
+# Taking input from the user
+input_string = input("Enter a string: ")
+
+# Removing the center character (if any) and printing the modified string
+modified_string = remove_center_character(input_string)
+print("Modified string after removing the center character (if any):", modified_string)
+
+
+Certainly! Here's a Python program that removes the center character from a string without using any built-in string manipulation functions (len(), slice, etc.):
+
+def remove_center_character(input_string):
+    # Initialize variables
+    input_length = 0
+    index = 0
+    temp_string = ""
+
+    # Iterate over the given input
+    for i in input_string:
+        if input_length // 2 == index: 
+def remove_center_character(input_string):
+    # Initialize variables
+    input_length = 0
+    index = 0
+    temp_string = ""
+
+    # Iterate over the given input
+    for i in input_string:
+        if input_length // 2 == index: 
+
+To achieve the task of removing the center character without using built-in string manipulation functions directly, we can implement the logic by iterating through the string character by character and constructing a new string excluding the center character when the length of the string is odd. Here's how you can do it:
+
+Explanation:
+Function remove_center_character(input_string):
+
+The function starts by initializing new_string to an empty string and length to 0.
+It iterates through input_string to count the number of characters (length of the string) without using len().
+Calculates the center_index by integer division of length by 2.
+Iterates through input_string again using a loop and an index variable to construct new_string excluding the character at center_index.
+Main Program:
+
+Takes input from the user (input_string).
+Calls remove_center_character(input_string) to get the modified string.
+Prints the modified string after removing the center character (if the string length was odd).
+Example:
+If the user inputs "Python", the center character (t) will be removed, resulting in "Pyhon" being printed as the modified string.
+
+If the user inputs "Hello", the center character (l) will be removed, resulting in "Helo" being printed as the modified string.
+
+If the user inputs "Hi", the program will indicate that there is no center character to remove because the string length is even, and "Hi" will be printed as is.
+
+register.html
+<h1>Sign Up Below</h1>
+<style>
+h5{
+    color: red;
+}
+</style>
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+
+<form method="POST" action="register">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username" />
+    <p>Email:</p>
+    <input type="email" name="email"/>
+    <p>Password:</p>
+    <input type="password" name="password"/>
+    <p>Repeat Password:</p>
+    <input type="password" name="password2"/><br>
+    <input type="submit"/>
+</form>
+
+ request
+request.GET
+request.GET['mac']
+ x = UserDevice.objects.all()
+"GET /ping?mac=%27afdafda%27 HTTP/1.1" 301 0
